@@ -1,0 +1,11 @@
+<h3>Forum: {{ model.forum.title }}</h3>
+<h2>Topic: {{ model.topic.title }}</h2>
+<ul>
+    {{#each model.posts as |post|}}
+        <li>
+            <h3>{{post.author}}</h3>
+            <p>{{post.submitDate}}</p>
+            <p>{{{post.content}}}</p>
+        </li>
+    {{/each}}
+</ul>
