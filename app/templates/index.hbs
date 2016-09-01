@@ -1,11 +1,25 @@
-<h3>Forum: {{ model.forum.title }}</h3>
-<h2>Topic: {{ model.topic.title }}</h2>
+<h3>Forum: {{ model.vbulletinForum.title }}</h3>
+<h2>Topic: {{ model.vbulletinTopic.title }}</h2>
 <ul>
-    {{#each model.posts as |post|}}
+    {{#each model.vbulletinPosts as |post|}}
         <li>
-            <h3>{{post.author}}</h3>
+            <h4>{{post.author}}</h4>
             <p>{{post.submitDate}}</p>
             <p>{{{post.content}}}</p>
+        </li>
+    {{/each}}
+</ul>
+<hr>
+<h3>Facebook</h3>
+<ul>
+    {{#each model.facebookFeedObjects as |obj|}}
+        <li>      
+            <h4>{{obj.message}}</h4>
+            <ul>
+                {{#each obj.comments as |comment|}}
+                <li>{{comment}}</li>
+                {{/each}}
+            </ul>
         </li>
     {{/each}}
 </ul>
