@@ -1,25 +1,29 @@
-<h3>Forum: {{ model.vbulletinForum.title }}</h3>
 <h2>Topic: {{ model.vbulletinTopic.title }}</h2>
-<ul>
-    {{#each model.vbulletinPosts as |post|}}
-        <li>
-            <h4>{{post.author}}</h4>
-            <p>{{post.submitDate}}</p>
-            <p>{{{post.content}}}</p>
-        </li>
-    {{/each}}
-</ul>
+<h3>Forum: {{ model.vbulletinTopic.forum.title }}</h3>
+{{#each model.vbulletinTopic.posts as |post|}}
+    <div>
+        <h4>{{post.author}}</h4>
+        <p>{{post.submitDate}}</p>
+        <p>{{{post.content}}}</p>
+    </div>
+{{/each}}
 <hr>
 <h3>Facebook</h3>
-<ul>
-    {{#each model.facebookFeedObjects as |obj|}}
-        <li>      
-            <h4>{{obj.message}}</h4>
+{{#each model.facebookFeed.posts as |post|}}
+    <div>
+        <h4>{{post.from.name}}</h4>      
+        <h3>{{post.message}}</h3>
+        <h4>{{post.name}}</h4>
+        <img src="{{post.picture}}">
+        {{#if post.likes.length}}
+            <h5>{{post.likes.length}} likes</h5>
+        {{/if}}
+        {{#if post.comments.length}}
             <ul>
-                {{#each obj.comments as |comment|}}
-                <li>{{comment}}</li>
+                {{#each post.comments as |comment|}}
+                    <li>{{comment.message}}</li>
                 {{/each}}
             </ul>
-        </li>
-    {{/each}}
-</ul>
+        {{/if}}
+    </div>
+{{/each}}

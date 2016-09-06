@@ -1,20 +1,18 @@
+import Ember from 'ember';
 import DS from 'ember-data';
 
-export default DS.JSONAPISerializer.extend({
-    modelNameFromPayloadKey(key) {
-        let withPrefix = 'facebook-' + key;
+export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
+    modelNameFromPayloadKey(payloadKey) {
+        let withPrefix = 'facebook-' + payloadKey;
         return this._super(withPrefix);
     },
 
-    payloadKeyFromModelName(modelName) {
-        let type = this._super(modelName);
-        return `${type.replace('facebook-', '')}`;
+    keyForAttribute(attr) {
+        let underscored = Ember.String.underscore(attr);
+        return underscored;
     },
-    
-    normalizeArrayResponse: function(store, primaryModelClass, payload, id, requestType) {
-        payload[primaryModelClass.modelName] = payload['data'];
-        delete payload['data'];
 
-        return this._normalizeResponse(store, primaryModelClass, payload, id, requestType, false);
+    attrs: {
+        from: { embedded: 'always' }
     }
 });

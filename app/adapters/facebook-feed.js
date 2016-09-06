@@ -1,10 +1,10 @@
-import Ember from 'ember';
 import DS from 'ember-data';
 
-export default DS.JSONAPIAdapter.extend({
-    host: 'https://graph.facebook.com/v2.7',
-    namespace: '604231966385537',
+export default DS.RESTAdapter.extend({
+    host: 'http://localhost:3000',
+    namespace: 'facebook',
     pathForType: function(type) {
-        return 'feed';
+        let replaced = type.replace('facebook-', '');
+        return replaced;
     }
 });

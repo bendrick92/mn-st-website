@@ -1,13 +1,20 @@
+import Ember from 'ember';
 import DS from 'ember-data';
 
-export default DS.JSONSerializer.extend({
-    modelNameFromPayloadKey(key) {
-        let withPrefix = 'facebook-' + key;
+export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
+    modelNameFromPayloadKey(payloadKey) {
+        let withPrefix = 'facebook-' + payloadKey;
         return this._super(withPrefix);
     },
 
-    payloadKeyFromModelName(modelName) {
-        let type = this._super(modelName);
-        return `${type.replace('facebook-', '')}`;
+    keyForAttribute(attr) {
+        let underscored = Ember.String.underscore(attr);
+        return underscored;
+    },
+
+    attrs: {
+        from: { embedded: 'always' },
+        comments: { embedded: 'always' },
+        likes: { embedded: 'always' }
     }
 });

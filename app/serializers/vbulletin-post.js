@@ -1,13 +1,14 @@
+import Ember from 'ember';
 import DS from 'ember-data';
 
-export default DS.JSONAPISerializer.extend({
-    modelNameFromPayloadKey(key) {
-        let withPrefix = 'vbulletin-' + key;
+export default DS.RESTSerializer.extend({
+    modelNameFromPayloadKey(payloadKey) {
+        let withPrefix = 'vbulletin-' + payloadKey;
         return this._super(withPrefix);
     },
 
-    payloadKeyFromModelName(modelName) {
-        let type = this._super(modelName);
-        return `${type.replace('vbulletin-', '')}`;
+    keyForAttribute(attr) {
+        let underscored = Ember.String.underscore(attr);
+        return underscored;
     }
 });

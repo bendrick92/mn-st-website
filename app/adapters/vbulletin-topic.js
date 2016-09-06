@@ -6,7 +6,6 @@ export default DS.JSONAPIAdapter.extend({
     namespace: 'vbulletin',
     pathForType: function(type) {
         let replaced = type.replace('vbulletin-', '');
-        let underscored = Ember.String.underscore(replaced);
-        return Ember.String.pluralize(underscored);
+        return replaced;
     }
 });
