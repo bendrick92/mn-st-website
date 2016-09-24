@@ -20,6 +20,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.adapterHost = 'http://localhost:3000'
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -40,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.adapterHost = 'https://api.mstoc.com'
   }
 
   return ENV;

@@ -1,27 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    /*didInsertElement: function () {
-        var carousel = this.$('ul.carousel').first();
-        var currItem = carousel.find('li:visible').first();
-        
-        var carouselInterval = setInterval(nextSlide, 2000);
-
-        function nextSlide () {
-            var nextItem = currItem.next();
-            if (nextItem.length > 0) {
-                nextItem.show();
-
-                carousel.addClass('changing');
-                carousel.animate({ left: '-100%'}, 750, 'swing', function () {
-                    currItem.hide(function () {
-                        carousel.css({ left: '0' });
-                        carousel.removeClass('changing');
-                    });
-                });
-            }
-        }
-    },*/
     actions: {
         changeSlide (title, event) {
             var carousel = this.$('.carousel');
@@ -39,14 +18,14 @@ export default Ember.Component.extend({
                 } else {
                     return seats.first();
                 }
-            };
+            }
             function prev (el) {
                 if (el.prev().length > 0) {
                     return el.prev();
                 } else {
                     return seats.last();
                 }
-            };
+            }
 
             el.removeClass('is-ref');
 
