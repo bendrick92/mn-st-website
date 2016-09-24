@@ -1,29 +1,12 @@
-<h2>Topic: {{ model.vbulletinTopic.title }}</h2>
-<h3>Forum: {{ model.vbulletinTopic.forum.title }}</h3>
-{{#each model.vbulletinTopic.posts as |post|}}
-    <div>
-        <h4>{{post.author}}</h4>
-        <p>{{post.submitDate}}</p>
-        <p>{{{post.content}}}</p>
+<section id="intro" class="palette-white">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <div class="center-align">
+                    <h2 class="section-heading no-margin">Welcome</h2>
+                </div>
+            </div>
+        </div>
     </div>
-{{/each}}
-<hr>
-<h3>Facebook</h3>
-{{#each model.facebookFeed.posts as |post|}}
-    <div>
-        <h4>{{post.from.name}}</h4>      
-        <h3>{{post.message}}</h3>
-        <h4>{{post.name}}</h4>
-        <img src="{{post.picture}}">
-        {{#if post.likes.length}}
-            <h5>{{post.likes.length}} likes</h5>
-        {{/if}}
-        {{#if post.comments.length}}
-            <ul>
-                {{#each post.comments as |comment|}}
-                    <li>{{comment.message}}</li>
-                {{/each}}
-            </ul>
-        {{/if}}
-    </div>
-{{/each}}
+</section>
+{{flex-carousel}}

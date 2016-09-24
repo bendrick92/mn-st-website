@@ -1,0 +1,13 @@
+<section id="flex-carousel">
+    <div class="carousel-wrapper">
+        <ul class="carousel is-set">
+            <div class="carousel-seat is-ref" style="background-image: url('/assets/images/mn_st_life.jpg');"></div>
+            <div class="carousel-seat" style="background-image: url('/assets/images/group_1.jpg');"></div>
+            <div class="carousel-seat" style="background-image: url('/assets/images/rs_1.jpg');"></div>
+            <div class="carousel-seat" style="background-image: url('/assets/images/st_1.jpg');"></div>
+        </ul>
+        <a class='toggle prev' onclick={{action 'changeSlide' this}}>{{fa-icon "chevron-left" size="lg"}}</a>
+        <a class='toggle next' data-toggle='next' onclick={{action 'changeSlide' this}}>{{fa-icon "chevron-right" size="lg"}}</a>
+    </div>
+</section>
+

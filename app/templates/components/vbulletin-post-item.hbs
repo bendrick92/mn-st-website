@@ -1,0 +1,17 @@
+<div class="post-item palette-white vbulletin-post">
+    <div class="post-meta">
+        <p class="post-author">{{vbulletinPost.author}}</p>
+        <p class="post-date">{{vbulletinPost.submitDate}}</p>
+    </div>
+    <div class="post-text">
+        {{#if vbulletinPost.quotes}}
+            {{#each vbulletinPost.quotes as |quote|}}
+                <div class="post-quote palette-light-gray">
+                    <p class="quote-author">{{quote.author}}</p>
+                    <p>{{fa-icon "quote-left" size="sm" class="text-dark-gray"}} {{quote.quoteContent}} {{fa-icon "quote-right" size="sm" class="text-dark-gray"}}</p>
+                </div>
+            {{/each}}
+        {{/if}}
+        <p>{{fa-icon "quote-left" size="sm"}} {{{vbulletinPost.postContent}}} {{fa-icon "quote-right" size="sm"}}</p>
+    </div>
+</div>

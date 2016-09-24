@@ -1,0 +1,41 @@
+<div class="post-item palette-white facebook-post">
+    <div class="post-meta">
+        <p class="post-author">{{facebookPost.from.name}}</p>
+        <p class="post-date">{{facebookPost.createdTime}}</p>
+    </div>
+    {{#if facebookPost.fullPicture}}
+        <div class="post-image" style="background-image: url('{{facebookPost.fullPicture}}');" onclick={{action 'showOverlay' this}}>
+        </div>
+        {{image-overlay imageUrl=facebookPost.fullPicture}}
+    {{/if}}
+    {{#if facebookPost.message}}
+        <div class="post-text">
+            <p>{{fa-icon "quote-left" size="sm" class="text-dark-gray"}} {{facebookPost.message}} {{fa-icon "quote-right" size="sm" class="text-dark-gray"}}</p>
+        </div>
+    {{/if}}
+    {{#if (or facebookPost.likes facebookPost.comments)}}
+        <div class="post-reactions">
+            {{#if facebookPost.likes}}
+                <div class="post-reaction-count">
+                    <div>{{facebookPost.likes.length}} {{fa-icon "thumbs-up" size="sm"}}</div>
+                </div>
+            {{/if}}
+            {{#if facebookPost.comments}}
+                <div class="post-reaction-count">
+                    <div>{{facebookPost.comments.length}} {{fa-icon "comment" size="sm"}}</div>
+                </div>
+                <ul class="post-comments">
+                    {{#each facebookPost.comments as |comment|}}
+                        <li class="palette-light-gray">
+                            <p class="comment-author">{{comment.from.name}}</p>
+                            <div class="comment-text">
+                                <p>{{fa-icon "quote-left" size="sm" class="text-dark-gray"}} {{comment.message}} {{fa-icon "quote-right" size="sm" class="text-dark-gray"}}</p>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+                <div class="comments-toggle center-align" onclick={{action 'toggleComments' this}}>View Comments</div>
+            {{/if}}
+        </div>
+    {{/if}}
+</div>

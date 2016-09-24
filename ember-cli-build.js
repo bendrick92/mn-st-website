@@ -8,7 +8,10 @@ module.exports = function(defaults) {
   });
   
   app.import('bower_components/moment/moment.js');
-
+  app.import('bower_components/skeleton/css/normalize.css');
+  app.import('bower_components/skeleton/css/skeleton.css');
+  app.import('bower_components/jquery/dist/jquery.js');
+  
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

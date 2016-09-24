@@ -1,0 +1,72 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab';
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+}
+a {
+    text-decoration: none;
+}
+.subheading {
+    font-weight: 300;
+}
+.section-heading {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header {
+    text-align: center;
+}
+    header .header-container nav ul {
+        text-align: right;
+    }
+        header .header-container nav ul li {
+            text-align: center;
+        }
+            header .header-container nav ul li a {
+                text-decoration: none;
+            }
+footer {
+    text-align: center;
+}
+    footer a {
+        text-decoration: none;
+    }
+.posts-container .post-item {
+    text-align: left;
+}
+    .posts-container .post-item .post-author {
+        font-weight: 600;
+    }
+    .posts-container .post-item .post-meta .post-title {
+        text-transform: uppercase;
+    }
+    .posts-container .post-item .post-meta .post-date {
+        
+    }
+    .posts-container .post-item .post-text {
+        line-height: 1.5em;
+    }
+        .posts-container .post-item .post-text .ellipsis {
+            text-align: center;
+        }
+    .posts-container .post-item .post-reactions ul.post-comments li .comment-author {
+        font-weight: 600;
+    }
+    .posts-container .post-item .post-reactions .toggle-comments {
+        text-align: center;
+    }
+
+.left-align {
+    text-align: left;
+}
+.center-align {
+    text-align: center;
+}
+.right-align {
+    text-align: right;
+}

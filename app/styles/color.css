@@ -1,0 +1,105 @@
+header .header-container nav ul li a {
+    color: inherit;
+}
+header .header-container nav ul li a:hover {
+    background-color: #ddecf6;
+    color: #3e4d57;
+    transition: all .25s linear;
+}
+footer a {
+    color: inherit;
+}
+
+.hamburger > span {
+    background-color: #ffffff;
+}
+    .hamburger span:nth-child(1) {
+        top: 0px;
+    }
+        .hamburger.open span:nth-child(1) {
+            top: 8px;
+            -webkit-transform: rotate(-135deg);
+            -moz-transform: rotate(-135deg);
+            -o-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+        }
+    .hamburger span:nth-child(2) {
+        top: 8px;
+    }
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+    .hamburger span:nth-child(3) {
+        top: 16px;
+    }
+        .hamburger.open span:nth-child(3) {
+            top: 8px;
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+.posts-container .post-item.vbulletin-post {
+    border-color: #ff5b1c;
+}
+.posts-container .post-item.facebook-post {
+    border-color: #2497e0;
+}
+    .posts-container .post-item .post-text {
+        background: inherit;
+    }
+        .posts-container .post-item .post-text .ellipsis {
+            background-color: inherit;
+        }
+            .posts-container .post-item .post-text .ellipsis::before {
+                background: linear-gradient(rgba(255,0,0,0), rgba(255,255,255,1));
+            }
+        .posts-container .post-item .post-reactions ul.post-comments li {
+            background-color: #ddecf6;
+        }
+.image-overlay {
+    background-color:rgba(0,0,0,0.75);
+}
+    .image-overlay .image-wrapper {
+        color: #ffffff;
+    }
+
+.color-sample {
+    color: #ffffff;
+}
+
+.palette-nitrous-blue {
+    background-color: #2497e0;
+    color: #ffffff;
+}
+.palette-white {
+    background-color: #ffffff;
+    color: #2c2d30;
+}
+.palette-dark-gray {
+    background-color: #3e4d57;
+    color: #ffffff;
+}
+.palette-light-gray {
+    background-color: #ddecf6;
+    color: #2c2d30;
+}
+.palette-orange {
+    background-color: #ff5b1c;
+}
+
+.text-nitrous-blue {
+    color: #2497e0;
+}
+.text-white {
+    color: #ffffff;
+}
+.text-dark-gray {
+    color: #3e4d57;
+}
+.text-light-gray {
+    color: #ddecf6;
+}
+.text-orange {
+    color: #ff561c;
+}

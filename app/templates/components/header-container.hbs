@@ -1,0 +1,18 @@
+<div class="container header-container">
+    <div class="title-container">
+        {{#link-to 'index'}}<img src="/assets/images/mnst_white.svg" class="page-title">{{/link-to}}
+        <div class="hamburger" onclick={{action 'toggleNav'}}>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <nav>
+        <ul onclick={{action 'toggleNav'}}>
+            <li>{{#link-to "index"}}Home{{/link-to}}</li>
+            <li>{{#link-to "posts"}}Posts{{/link-to}}</li>
+            <li>{{#link-to "events"}}Events{{/link-to}}</li>
+            <li>{{#link-to "about"}}About{{/link-to}}</li>
+        </ul>
+    </nav>
+</div>

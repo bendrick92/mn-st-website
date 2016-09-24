@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({
@@ -5,6 +6,7 @@ export default DS.RESTAdapter.extend({
     namespace: 'facebook',
     pathForType: function(type) {
         let replaced = type.replace('facebook-', '');
-        return replaced;
+        let pluralized = Ember.String.pluralize(replaced);
+        return pluralized;
     }
 });

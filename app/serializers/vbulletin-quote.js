@@ -13,6 +13,6 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
     },
 
     attrs: {
-        topics: { embedded: 'always' },
+        post: { embedded: 'always' }
     }
 });

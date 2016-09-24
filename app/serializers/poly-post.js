@@ -3,7 +3,7 @@ import DS from 'ember-data';
 
 export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
     modelNameFromPayloadKey(payloadKey) {
-        let withPrefix = 'vbulletin-' + payloadKey;
+        let withPrefix = 'poly-' + payloadKey;
         return this._super(withPrefix);
     },
 
@@ -13,6 +13,7 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
     },
 
     attrs: {
-        topics: { embedded: 'always' },
+        facebookPost: { embedded: 'always' },
+        vbulletinPost: { embedded: 'always' }
     }
 });
