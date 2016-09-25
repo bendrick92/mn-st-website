@@ -14,6 +14,7 @@
         display: inline-block;
     }
     header .header-container {
+        padding: 0;
         flex-flow: column wrap;
     }
         header .header-container .title-container, header .header-container nav {
@@ -21,15 +22,20 @@
         }
         header .header-container .title-container {
             width: 100%;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
         }
             header .header-container .title-container .page-title {
-                height: 4.5rem;
+                flex-grow: 1;
+                text-align: left;
             }
-            header .header-container .title-container .hamburger {
-                position: absolute;
-                right: 4rem;
-                top: 50%;
-                transform: translateY(-50%);
+                header .header-container .title-container .page-title img {
+                    height: 4.5rem;
+                }
+            header .header-container .title-container .hamburger-box {
+                flex-grow: 0;
             }
         header .header-container nav {
             width: 100%;
@@ -46,7 +52,7 @@
                 flex-grow: 1;
             }
                 header .header-container nav ul li a {
-                    font-size: 1.5em;
+                    font-size: 1em;
                 }
 }
 @media screen and (min-width: 1025px) {

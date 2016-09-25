@@ -19,12 +19,12 @@ body > .ember-view {
     }
         header .header-container .title-container {
             position: relative;
+            flex-grow: 0;
         }
-            header .header-container .title-container .page-title {
+            header .header-container .title-container .page-title img {
                 height: 6rem;
                 padding: 0;
                 margin: 3rem 0;
-                flex-grow: 0;
             }
         header .header-container nav {
             flex-grow: 1;
@@ -58,17 +58,17 @@ body > .ember-view {
             main > section.full-height {
                 height: 100%;
             }
-            main > section .section-heading {
-                margin-bottom: 4rem;
+            main > section.section-heading h2 {
+                margin: 0;
             }
     footer > div {
         margin: 3rem 0;
     }
 
 .hamburger {
-    width: 40px;
-    height: 40px;
-    margin: 0 0 2rem;
+    width: 30px;
+    height: 30px;
+    margin: 0;
     display: none;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -82,7 +82,7 @@ body > .ember-view {
 }
     .hamburger > span {
         width: 100%;
-        height: 8px;
+        height: 6px;
         display: block;
         position: absolute;
         -webkit-transform: rotate(0deg);
@@ -98,23 +98,23 @@ body > .ember-view {
         top: 0px;
     }
         .hamburger.open span:nth-child(1) {
-            top: 16px;
+            top: 12px;
             -webkit-transform: rotate(-135deg);
             -moz-transform: rotate(-135deg);
             -o-transform: rotate(-135deg);
             transform: rotate(-135deg);
         }
     .hamburger span:nth-child(2) {
-        top: 16px;
+        top: 12px;
     }
         .hamburger.open span:nth-child(2) {
             opacity: 0;
         }
     .hamburger span:nth-child(3) {
-        top: 32px;
+        top: 24px;
     }
         .hamburger.open span:nth-child(3) {
-            top: 16px;
+            top: 12px;
             -webkit-transform: rotate(135deg);
             -moz-transform: rotate(135deg);
             -o-transform: rotate(135deg);
@@ -309,4 +309,8 @@ body > .ember-view {
 
 .no-margin {
     margin: 0 !important;
+}
+.margin-two {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }

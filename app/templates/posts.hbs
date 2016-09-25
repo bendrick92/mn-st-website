@@ -1,12 +1,10 @@
+<section id="posts-title" class="section-heading palette-white">
+    <div class="center-align">
+        <h2>Latest Posts</h2>
+    </div>
+</section>
 <section id="posts">
     <div class="container posts-container">
-        <div class="row">
-            <div class="twelve columns">
-                <div class="center-align">
-                    <h2 class="section-heading">Latest Posts</h2>
-                </div>
-            </div>
-        </div>
         {{#each model.polyPosts as |post|}}
             {{#if post.vbulletinPost}}
                 {{vbulletin-post-item vbulletinPost=post.vbulletinPost}}

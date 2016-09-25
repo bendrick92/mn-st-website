@@ -1,6 +1,6 @@
 .carousel-wrapper {
     width: 100%;
-    height: 80vh;
+    height: 60em;
     position: relative;
     overflow: hidden;
 }
@@ -55,3 +55,17 @@
             right: 1em;
             top: 50%;
         }
+
+@media screen and (max-width: 550px) {
+    .carousel-wrapper {
+        height: 30em;
+    }
+}
+@media screen and (min-width: 551px) and (max-width: 1024px) {
+    .carousel-wrapper {
+        height: 50em;
+    }
+}
+@media screen and (min-width: 1025px) {
+
+}

@@ -1,10 +1,14 @@
 <div class="container header-container">
     <div class="title-container">
-        {{#link-to 'index'}}<img src="/assets/images/mnst_white.svg" class="page-title">{{/link-to}}
-        <div class="hamburger" onclick={{action 'toggleNav'}}>
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="page-title">
+            {{#link-to 'index'}}<img src="/assets/images/mnst_white.svg">{{/link-to}}
+        </div>
+        <div class="hamburger-box">
+            <div class="hamburger" onclick={{action 'toggleNav'}}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </div>
     <nav>
