@@ -41,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.adapterHost = 'http://api.mstoc.com'
+    ENV.adapterHost = 'http://api.mnstoc.com'
   }
 
   return ENV;
