@@ -217,6 +217,7 @@ body > .ember-view {
                 }
                 .posts-container .post-item .post-reactions ul.post-comments li ul.comment-comments {
                     margin: .75em 0 0;
+                    box-sizing: border-box;
                 }
                     .posts-container .post-item .post-reactions ul.post-comments li p, .posts-container .post-item .post-reactions ul.post-comments li ul.comment-comments li p {
                         margin: 0;

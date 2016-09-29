@@ -58,8 +58,8 @@ footer {
     .posts-container .post-item .post-reactions ul.post-comments li .comment-author, .posts-container .post-item .post-reactions ul.post-comments li ul.comment-comments li .comment-author {
         font-weight: 600;
     }
-    .posts-container .post-item .post-reactions .toggle-comments {
-        text-align: center;
+    .posts-container .post-item .post-reactions ul.post-comments li .comment-text, .posts-container .post-item .post-reactions ul.post-comments li ul.comment-comments li .comment-text {
+        word-wrap: break-word;
     }
 
 .left-align {
