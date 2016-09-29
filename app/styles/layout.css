@@ -202,23 +202,27 @@ body > .ember-view {
                 margin: 0 .5em .75em 0;
                 display: inline-block;
             }
-            .posts-container .post-item .post-reactions ul.post-comments {
+            .posts-container .post-item .post-reactions ul.post-comments, .posts-container .post-item .post-reactions ul.post-comments li ul.comment-comments {
                 padding: 0;
                 margin: 0;
                 display: none;
                 list-style-type: none;
                 box-sizing: border-box;
             }
-                .posts-container .post-item .post-reactions ul.post-comments li {
+                .posts-container .post-item .post-reactions ul.post-comments li, .posts-container .post-item .post-reactions ul.post-comments li ul.comment-comments li {
                     padding: .75em .75em;
                     margin: 0 0 2rem;
                     display: block;
                     box-sizing: border-box;
                 }
-                    .posts-container .post-item .post-reactions ul.post-comments li p {
+                .posts-container .post-item .post-reactions ul.post-comments li ul.comment-comments {
+                    margin: .75em 0 0;
+                }
+                    .posts-container .post-item .post-reactions ul.post-comments li p, .posts-container .post-item .post-reactions ul.post-comments li ul.comment-comments li p {
                         margin: 0;
                     }
-                        .posts-container .post-item .post-reactions ul.post-comments li .comment-text {
+                        .posts-container .post-item .post-reactions ul.post-comments li .comment-text, .posts-container .post-item .post-reactions ul.post-comments li ul.comment-comments li .comment-text {
+                            margin: .25em 0;
                             box-sizing: border-box;
                         }
             .posts-container .post-item .post-reactions .comments-toggle {

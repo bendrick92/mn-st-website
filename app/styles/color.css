@@ -54,9 +54,6 @@ footer a {
             .posts-container .post-item .post-text .ellipsis::before {
                 background: linear-gradient(rgba(255,0,0,0), rgba(255,255,255,1));
             }
-        .posts-container .post-item .post-reactions ul.post-comments li {
-            background-color: #ddecf6;
-        }
 .image-overlay {
     background-color:rgba(0,0,0,0.75);
 }

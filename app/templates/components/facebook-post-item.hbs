@@ -31,6 +31,19 @@
                             <div class="comment-text">
                                 <p>{{fa-icon "quote-left" size="sm" class="text-dark-gray"}} {{comment.message}} {{fa-icon "quote-right" size="sm" class="text-dark-gray"}}</p>
                             </div>
+                            {{#if comment.comments}}
+                                <ul class="comment-comments">
+                                    {{#each comment.comments as |commentComment|}}
+                                        <li class="palette-white">
+                                            <p class="comment-author">{{commentComment.from.name}}</p>
+                                            <div class="comment-text">
+                                                <p>{{fa-icon "quote-left" size="sm" class="text-dark-gray"}} {{commentComment.message}} {{fa-icon "quote-right" size="sm" class="text-dark-gray"}}</p>
+                                            </div>
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                                <div class="comments-toggle center-align" onclick={{action 'toggleCommentComments' this}}>View Replies</div>
+                            {{/if}}
                         </li>
                     {{/each}}
                 </ul>

@@ -5,7 +5,7 @@ export default Ember.Component.extend({
         toggleComments (title, event) {
             var commentsToggle = this.$(event.target);
             var comments = commentsToggle.siblings('ul.post-comments');
-
+            
             comments.toggleClass('show-all');
             comments.slideToggle();
 
@@ -14,6 +14,20 @@ export default Ember.Component.extend({
             }
             else {
                 commentsToggle.text('View Comments');
+            }
+        },
+        toggleCommentComments (title, event) {
+            var commentCommentsToggle = this.$(event.target);
+            var commentComments = commentCommentsToggle.siblings('ul.comment-comments');
+
+            commentComments.toggleClass('show-all');
+            commentComments.slideToggle();
+
+            if (commentComments.hasClass('show-all')) {
+                commentCommentsToggle.text('Hide Replies');
+            }
+            else {
+                commentCommentsToggle.text('View Replies');
             }
         },
         showOverlay (title, event) {

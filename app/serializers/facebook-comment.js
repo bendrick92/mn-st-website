@@ -13,6 +13,7 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
     },
 
     attrs: {
-        from: { embedded: 'always' }
+        from: { embedded: 'always' },
+        comments: { embedded: 'always' }
     }
 });
