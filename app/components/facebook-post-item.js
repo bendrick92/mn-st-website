@@ -34,5 +34,11 @@ export default Ember.Component.extend({
             var imageOverlay = this.$(event.target).siblings('.ember-view').children('.image-overlay');
             imageOverlay.css('display', 'flex');
         }
+    },
+    didInsertElement() {
+        var postTexts = this.$('post-text');
+        var commentTexts = this.$('.comment-text');
+        postTexts.linkify();
+        commentTexts.linkify();
     }
 });
