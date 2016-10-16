@@ -164,6 +164,9 @@ body > .ember-view {
             overflow: hidden;
             box-sizing: border-box;
         }
+            .posts-container .post-item .post-text img {
+                max-width: 100%;
+            }
             .posts-container .post-item .post-text .post-quote {
                 padding: 1em;
                 margin: 0 0 2rem;
