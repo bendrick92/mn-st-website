@@ -13,9 +13,6 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
     },
 
     attrs: {
-        from: { embedded: 'always' },
-        comments: { embedded: 'always' },
-        likes: { embedded: 'always' },
-        attachments: { embedded: 'always' }
+        subattachments: { embedded: 'always' }
     }
 });

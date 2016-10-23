@@ -5,5 +5,6 @@ import { belongsTo, hasMany } from 'ember-data/relationships';
 export default Model.extend({
     from: belongsTo('facebook-user'),
     message: attr(),
-    comments: hasMany('facebook-comment')
+    comments: hasMany('facebook-comment'),
+    attachment: belongsTo('facebook-attachment')
 });

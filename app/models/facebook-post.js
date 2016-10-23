@@ -12,5 +12,6 @@ export default Model.extend({
     message: attr(),
     postType: attr(),
     comments: hasMany('facebook-comment'),
-    likes: hasMany('facebook-user')
+    likes: hasMany('facebook-user'),
+    attachments: hasMany('facebook-attachment')
 });

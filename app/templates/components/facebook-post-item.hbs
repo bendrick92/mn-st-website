@@ -28,17 +28,31 @@
                     {{#each facebookPost.comments as |comment|}}
                         <li class="palette-light-gray">
                             <p class="comment-author">{{comment.from.name}}</p>
-                            <div class="comment-text">
-                                <p>{{fa-icon "quote-left" size="sm" class="text-dark-gray"}} {{comment.message}} {{fa-icon "quote-right" size="sm" class="text-dark-gray"}}</p>
-                            </div>
+                            {{#if comment.attachment}}
+                                <div class="comment-image" style="background-image: url('{{comment.attachment.imageSrc}}');" onclick={{action 'showOverlay' this}}>
+                                </div>
+                                {{image-overlay imageUrl=comment.attachment.imageSrc}}
+                            {{/if}}
+                            {{#if comment.message}}
+                                <div class="comment-text">
+                                    <p>{{fa-icon "quote-left" size="sm" class="text-dark-gray"}} {{comment.message}} {{fa-icon "quote-right" size="sm" class="text-dark-gray"}}</p>
+                                </div>
+                            {{/if}}
                             {{#if comment.comments}}
                                 <ul class="comment-comments">
                                     {{#each comment.comments as |commentComment|}}
                                         <li class="palette-white">
                                             <p class="comment-author">{{commentComment.from.name}}</p>
-                                            <div class="comment-text">
-                                                <p>{{fa-icon "quote-left" size="sm" class="text-dark-gray"}} {{commentComment.message}} {{fa-icon "quote-right" size="sm" class="text-dark-gray"}}</p>
-                                            </div>
+                                            {{#if commentComment.attachment}}
+                                                <div class="comment-image" style="background-image: url('{{commentComment.attachment.imageSrc}}');"  onclick={{action 'showOverlay' this}}>
+                                                </div>
+                                                {{image-overlay imageUrl=commentComment.attachment.imageSrc}}
+                                            {{/if}}
+                                            {{#if commentComment.message}}
+                                                <div class="comment-text">
+                                                    <p>{{fa-icon "quote-left" size="sm" class="text-dark-gray"}} {{commentComment.message}} {{fa-icon "quote-right" size="sm" class="text-dark-gray"}}</p>
+                                                </div>
+                                            {{/if}}
                                         </li>
                                     {{/each}}
                                 </ul>
